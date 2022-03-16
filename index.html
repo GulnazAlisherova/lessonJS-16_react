@@ -14,44 +14,47 @@
   
   <div id="root"></div>
   <script type="text/babel">
-  ReactDOM.render((
-    <div>
-      <Person name="Gulnaz" age="15" lastName="Alisherova"/>
-    <Sum a={5} b={10}/>
-    <Sum a={10} b={5}/>
-    <Larger a={10} b={5}/>
-    <Smaller a={5} b={20}/>
-    <ArticleSummary>
-    title="This is a sample article"
-    url="#"
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, voluptatem nobis!
-    </ArticleSummary>
-    function ArticleSummary(props){
-      <article>
-        <h2>
-      <a href="{props.url">{props.title}</a></h2>
-      <p>{props.children}</p>
-      </article>
-    }
-    </div>
-  ),document.querySelector('#root'));
+    ReactDOM.render((
+      <div>
+       <Person name="Gulnaz" age="15" lastName="Alisherova"/>
+       <Sum a={5} b={10} />
+       <Sum a={10} b={5}/>
+       <Larger a={10} b={5} />
+       <Larger a={5} b={20} />
 
-  function Larger(props){
-    if(props.a>props.b){
-      return<div>{props.a}</div>;
-    }
-    else{
-      return<div>{props.b}</div>;
-    }
-  }
-  function Sum(props){
-    return<div>{props.a+props.b}</div>
-  }
+       <a href="#"></a>
+       <ArticleSummary>
+       title="This is a sample article"
+       url="#">
+       Lorem iosum dolor sit amet adipising elit. Ipsam, dolore.
+      </ArticleSummary>
+      function ArticleSummary(props) {
+         <article>
+             <h2>
+               <a href={props.url}>{props.title}</a></h2>
+               <p>{props.children}</p>
+           </article>
+ }
+     
+      </div>
+    ), document.querySelector('#root'));
 
-  function Person(props){
-    return<div>My name is {props.name}. lastName {props.lastName}. I'm {props.age}</div>
-  }
-</script>
+    function Larger (props){
+      if (props.a > props.b) {
+        return <div>{props.a}</div>;
+      }
+      else {
+        return <div>{props.b}</div>;
+      }
+    }
+
+    function Sum(props) {
+      return <div>{props.a + props.b}</div>;
+    }
+      function Person(props) {
+        return <div>My name is {props.name}. Lastname -  {props.lastName}. I'm {props.age} years old.</div>;
+    }
+  </script>
   <script src="./script.js"></script>
 </body>
 </html>
